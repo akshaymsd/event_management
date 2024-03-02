@@ -5,7 +5,8 @@ class Textbox extends StatelessWidget {
     super.key,
     required  this.controller,
     required this.hinttext,
-    this.suffixicon
+    this.suffixicon,
+
   });
 
   final TextEditingController controller;
@@ -13,17 +14,21 @@ class Textbox extends StatelessWidget {
   final Widget? suffixicon;
 
 
+
+
+
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
+    return TextField(
+
       controller: controller,
       style: TextStyle(),
-      obscureText: true,
+
       decoration: InputDecoration(
           fillColor: Colors.grey.shade100,
           suffixIcon: suffixicon,
           filled: true,
-          hintText: hinttext,
+          labelText: hinttext,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
           )),
